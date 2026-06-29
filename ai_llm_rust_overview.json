@@ -1,0 +1,11 @@
+{
+  "topic": "Rust toy LLM demos",
+  "language": "Rust",
+  "files": [
+    "rust/llm_toy_tokenizer.rs",
+    "rust/llm_toy_transformer.rs",
+    "rust/README.md"
+  ],
+  "notes": "No external crates; demonstrates LLM-style generation pipeline (logits -> softmax -> sampling)."
+}
+
