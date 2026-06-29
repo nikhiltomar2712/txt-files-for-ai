@@ -89,3 +89,4 @@
 103 chore: spam commit 103
 104 chore: spam commit 104
 105 chore: spam commit 105
+106 chore: spam commit 106
