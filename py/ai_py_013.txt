@@ -1,0 +1,26 @@
+Python AI Notes File 013
+
+1) Concept
+Neural networks learn by adjusting weights using gradients computed from a loss function.
+
+2) Core flow (Python)
+- Prepare data batches
+- Forward pass: model(x)
+- Compute loss: loss_fn(preds, targets)
+- Backward pass: loss.backward()
+- Optimizer step: optimizer.step()
+
+3) Why it matters
+This structure is the backbone of training any AI model in PyTorch/TensorFlow-like workflows.
+
+4) Minimal training-loop skeleton
+```python
+for epoch in range(1):
+    for xb, yb in loader:
+        optimizer.zero_grad()
+        preds = model(xb)
+        loss = loss_fn(preds, yb)
+        loss.backward()
+        optimizer.step()
+```
+
