@@ -10,7 +10,7 @@ import math
 import random
 
 
-def set_seed(seed: int = 032) -> None:
+def set_seed(seed: int = 32) -> None:
     random.seed(seed)
 
 
@@ -33,7 +33,7 @@ def sample_from_probs(probs: list[float]) -> int:
 
 def tiny_next_token_predictor(prompt: str = "ai", vocab: str = "abcdefghijklmnopqrstuvwxyz .") -> str:
     """Toy predictor: scores next characters using simple heuristics."""
-    set_seed(032)
+    set_seed(32)
     # Heuristic score based on prompt length and character position
     base = len(prompt) % max(1, len(vocab))
     scores = []
