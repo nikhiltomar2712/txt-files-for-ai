@@ -1,0 +1,11 @@
+{
+  "topic": "Additional Rust toy AI demos",
+  "language": "Rust",
+  "files": [
+    "rust/llm_bigram_lm.rs",
+    "rust/llm_mlp_classifier.rs",
+    "rust/README.md"
+  ],
+  "notes": "Bigram LM demonstrates a probabilistic text generator; MLP classifier demonstrates a training pipeline (SGD + backprop) without external crates."
+}
+
