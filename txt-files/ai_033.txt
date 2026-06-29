@@ -1,0 +1,76 @@
+Title: AI Topic $i — How AI works & how to build AI
+
+AI is a collection of methods that enable computers to learn, reason, and make predictions from data. The exact techniques vary, but most successful AI systems follow the same overall pipeline: define a goal, collect/prepare data, train a model, evaluate it, then deploy it.
+
+What you should understand in this file:
+1) Core concept
+2) Why it matters
+3) How to implement (Python-friendly steps)
+4) Small code snippet (starter example)
+
+Core concept (for $i):
+- Think of a model as a function: f(x) -> y
+- During training, the model parameters are adjusted to reduce prediction error.
+- The training loop uses an optimizer to minimize a loss function.
+
+Practical steps to build an AI system:
+1. Pick a task (classification, regression, text generation, image recognition, etc.).
+2. Prepare a dataset (inputs X and labels/targets y if supervised).
+3. Choose a model class (e.g., logistic regression, MLP, CNN, Transformer).
+4. Choose a loss function (e.g., cross-entropy for classification).
+5. Train for multiple epochs using mini-batches.
+6. Evaluate using proper metrics.
+7. Save the trained model and run inference on new data.
+
+Starter Python code (PyTorch training loop skeleton):
+
+```python
+import torch
+from torch import nn
+from torch.utils.data import DataLoader, TensorDataset
+
+# Dummy dataset (replace with real data)
+X = torch.randn(256, 10)
+y = torch.randint(0, 3, (256,))
+
+dataset = TensorDataset(X, y)
+loader = DataLoader(dataset, batch_size=32, shuffle=True)
+
+model = nn.Sequential(
+    nn.Linear(10, 32),
+    nn.ReLU(),
+    nn.Linear(32, 3)
+)
+
+criterion = nn.CrossEntropyLoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
+
+model.train()
+for epoch in range(3):
+    total_loss = 0.0
+    for xb, yb in loader:
+        optimizer.zero_grad()
+        logits = model(xb)
+        loss = criterion(logits, yb)
+        loss.backward()
+        optimizer.step()
+        total_loss += loss.item()
+    print(f"epoch={epoch} loss={total_loss/len(loader):.4f}")
+
+# Inference example
+model.eval()
+with torch.no_grad():
+    sample = torch.randn(1, 10)
+    pred = model(sample).argmax(dim=1)
+    print("pred class:", pred.item())
+```
+
+Notes:
+- Replace dummy data with your dataset.
+- Use validation split to avoid overfitting.
+- Logging loss/metrics helps you debug.
+
+Suggested next improvements:
+- Add accuracy metric.
+- Use GPU if available.
+- Implement a real dataset class.

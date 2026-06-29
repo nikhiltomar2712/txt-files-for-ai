@@ -1,0 +1,25 @@
+Title: Artificial Intelligence (AI) — Overview
+
+Artificial Intelligence (AI) is a field of computer science focused on building systems that can perform tasks that typically require human intelligence. These tasks include understanding language, recognizing images, planning actions, learning from experience, and making decisions.
+
+Key idea:
+AI systems learn patterns from data (examples) and use those patterns to make predictions or generate outputs.
+
+Common AI subfields:
+1. Machine Learning (ML): Models learn from data.
+2. Deep Learning (DL): ML using neural networks with many layers.
+3. Natural Language Processing (NLP): AI for text and language.
+4. Computer Vision: AI for images and video.
+5. Reinforcement Learning (RL): AI that learns by interacting with an environment.
+
+How AI works (high level):
+1. Data collection
+2. Data preparation (cleaning, labeling)
+3. Training (learning model parameters)
+4. Evaluation (measuring quality)
+5. Deployment (using model for new inputs)
+
+A simple mental model:
+- Training = learn from examples
+- Inference = use what you learned to answer new questions
+
