@@ -1,15 +1,14 @@
-# JavaScript examples (AI + toy LLM)
+# JavaScript code (toy LLM demos)
 
-## `llm_simple_chat.js`
-A toy LLM-like generator showing how an LLM chat loop is structured.
-
-Run:
-
+## Run
 ```bash
 node llm_simple_chat.js
+node llm_generate_demo.js "Hello AI"
 ```
 
-Type prompts like:
-- `How does AI training work?`
-- `How do I build an LLM?`
+## Files
+- `llm_simple_chat.js` - simple character-level toy chat
+- `llm_toy_tokenizer.js` - tokenizer helper (toy)
+- `llm_toy_transformer.js` - tiny transformer-like text generator (toy)
+- `llm_generate_demo.js` - demo runner
 

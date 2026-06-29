@@ -11,6 +11,12 @@ Links:
 ---
 
 ## Topics included
+
+## Extra resources
+- JSON reference files: `ai_llm_overview.json`, `ai_llm_architecture_notes.json`
+- PDF summaries: `AI_Overview.pdf`, `LLM_Workflow.pdf`
+
+
 - AI basics and terminology
 - Machine Learning vs Deep Learning
 - Neural networks

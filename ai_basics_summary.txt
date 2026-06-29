@@ -1,0 +1,10 @@
+AI & LLM quick summary (text fallback).
+
+1) AI: broad term for systems that perform tasks requiring intelligence.
+2) ML: trains models from data.
+3) DL: neural networks with multiple layers.
+4) LLMs: large language models trained to predict the next token in text.
+5) Transformer: architecture based on self-attention.
+6) Training loop: forward pass -> compute loss -> backprop -> optimizer step.
+7) Inference: generate next token repeatedly using a sampling strategy.
+
